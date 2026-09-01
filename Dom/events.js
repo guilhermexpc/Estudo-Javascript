@@ -39,4 +39,14 @@ function eventoElementoEspecifico() {
   });
 }
 
-eventoElementoEspecifico();
+function eventoFormulario() {
+  console.log("asd");
+  const form = document.querySelector("form");
+
+  form.onsubmit = (event) => {
+    event.preventDefault();
+    console.log("Submit no formulário acionado");
+  };
+}
+
+eventoFormulario();
