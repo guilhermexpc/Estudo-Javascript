@@ -15,3 +15,28 @@ function eventOnWindow() {
 
   var teste = 2;
 }
+
+function eventoElementoEspecifico() {
+  const ul = document.querySelector("ul");
+  const button = document.querySelector("button");
+
+  console.log();
+  ul.addEventListener("scroll", (event) => {
+    console.log(ul.scrollTop);
+
+    if (ul.scrollTop >= 310) {
+      console.log("Fim da lista");
+      ul.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  });
+
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    console.log("clicou no botão");
+  });
+}
+
+eventoElementoEspecifico();
