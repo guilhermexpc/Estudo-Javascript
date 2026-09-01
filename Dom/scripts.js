@@ -113,4 +113,10 @@ function criarElemento() {
   newGuest.id.remove();
 }
 
-criarElemento();
+function manipularAtributos() {
+  const input = document.querySelector("input");
+  input.setAttribute("disabled", true);
+  input.setAttribute("type", "file");
+  input.removeAttribute("id");
+}
+manipularAtributos();
