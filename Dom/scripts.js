@@ -80,4 +80,37 @@ function manipularCSS() {
   button.style.backgroundColor = "red";
 }
 
-manipularCSS();
+function criarElemento() {
+  const guests = document.querySelector("ul");
+  console.log(guests);
+
+  const newGuest = document.createElement("li");
+  newGuest.id = "guest-3";
+  newGuest.classList.add("guest");
+  newGuest.id.remove();
+  const guestFirstName = document.createElement("span");
+  const guestLastName = document.createElement("span");
+  guestFirstName.textContent = "Guilherme";
+  guestLastName.textContent = "Campos";
+  console.log(guestFirstName);
+
+  // Adiciona o elemento após o último filho
+  newGuest.append(guestFirstName);
+  // Adiciona o elemento como 1º filho
+  newGuest.prepend(guestLastName);
+  newGuest.append(guestFirstName, guestLastName);
+
+  newGuest.removeChild(guestLastName);
+  console.log(newGuest);
+
+  guests.append(newGuest);
+
+  // Remove um elemento -- é preciso informar qual elemento
+  newGuest.removeChild(guestLastName);
+  // Adicionar a ID no elemento
+  newGuest.id = "guest-3";
+  // Remover a ID do elemento
+  newGuest.id.remove();
+}
+
+criarElemento();
