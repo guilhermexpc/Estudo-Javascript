@@ -1,10 +1,8 @@
 // Função anônima - Função sem nome
 const showMessage = function () {
-  var teste = "asdas";
   return "Função sem nome";
 };
 
-console.log(teste);
 console.log(showMessage());
 
 // Arrow function
