@@ -52,7 +52,7 @@ function domQuerySelecton() {
   document.querySelector("p:not(.hidden)"); // negação
 }
 
-function manipularConteudo() {
+function manipularConteudoHTML() {
   // textContent Altera o valor do conteudo da tag selecionada
   const guest1 = document.querySelector("#guest-1");
   const guest1Span = document.querySelector("#guest-1 span");
@@ -68,4 +68,16 @@ function manipularConteudo() {
   console.log(guestInneHTML);
 }
 
-manipularConteudo();
+function manipularCSS() {
+  const input = document.querySelector("#name");
+
+  input.classList.add("input-error");
+  input.classList.remove("input-error");
+
+  input.classList.toggle("input-error");
+
+  const button = document.querySelector("button");
+  button.style.backgroundColor = "red";
+}
+
+manipularCSS();
