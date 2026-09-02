@@ -40,7 +40,6 @@ function eventoElementoEspecifico() {
 }
 
 function eventoFormulario() {
-  console.log("asd");
   const form = document.querySelector("form");
 
   form.onsubmit = (event) => {
@@ -49,4 +48,23 @@ function eventoFormulario() {
   };
 }
 
-eventoFormulario();
+function eventoInput() {
+  const input = document.querySelector("input");
+  // keydown - Quando a tecla é precionada;
+  // input.addEventListener("keydown", (event) => {
+  //   console.log(event.key);
+  // });
+
+  // keypress - Quando a tecla de CARACTER é precionada;
+  input.addEventListener("keypress", (event) => {
+    console.log(event.key);
+  });
+
+  function inputChange() {
+    console.log("Input Alterado");
+  }
+
+  input.onchange = () => inputChange();
+}
+
+eventoInput();
