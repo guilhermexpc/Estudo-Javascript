@@ -27,5 +27,5 @@ function regexManipulation() {
   };
 }
 
-// regexFundamental();
+regexFundamental();
 regexManipulation();
